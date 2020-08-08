@@ -10,9 +10,7 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(JavaConfig.class);
 
-        Knight knight1 = context.getBean("knight1", Knight.class);
-        Knight knight2 = context.getBean("knight2", Knight.class);
-        knight1.doQuest();
-        knight2.doQuest();
+        Knight bean = context.getBean(Knight.class);
+        System.out.println(bean);
     }
 }
